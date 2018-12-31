@@ -5,7 +5,6 @@ import pathlib
 from colorama import Fore, Back, Style
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import time
 from datetime import datetime
 
 
@@ -68,7 +67,7 @@ def redpen_check(file_path: str):
     :return:
     """
     # redpenの実行 結果をjson形式で取得
-    cmd = ['redpen', '-r', 'json2', file_path]
+    cmd = ['redpen', '-c', 'conf/redpen-conf.xml', '-r', 'json2', file_path]
     # redpenの実行結果を直接表示させないためにPIPEを指定する
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     # redpenの結果取得

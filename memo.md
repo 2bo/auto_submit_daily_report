@@ -36,12 +36,4 @@ https://kamiya555.github.io/2015/09/26/argparse-args/
 
 https://www.lifewithpython.com/2016/06/python-ternary-operator.html
 
-#### 設計
 
-1. コマンドラインで引数を取得する。
-1. ファイルの存在チェック
-1. ファイルを読み込む
-1. redpenでチェックする
-1. 結果を表示する
-1. 投稿を確認する
-1. 投稿する

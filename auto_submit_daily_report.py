@@ -32,7 +32,7 @@ def main():
         if args.date is not None:
             try:
                 date = datetime.strptime(args.date[0], "%Y%m%d")
-            except:
+            except ValueError:
                 print("Not a valid date: '{0}'".format(args.date[0]))
                 return
         else:
@@ -76,7 +76,7 @@ def redpen_check(file_path: str):
     num_of_errors = 0
 
     # 結果の表示
-    if (len(stdout) > 0):
+    if len(stdout) > 0:
         # jsonをdictionaryに変換
         json_dict = json.loads(stdout)
         errors = json_dict[0]['errors']
@@ -125,4 +125,5 @@ def submit_daily_report(file_path: str, name: str, date: datetime):
     driver.quit()
 
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()

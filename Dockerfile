@@ -18,4 +18,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "./auto_submit_daily_report.py"]
+ENTRYPOINT ["python","auto_submit_daily_report.py"]
+
+CMD ["--help"]
